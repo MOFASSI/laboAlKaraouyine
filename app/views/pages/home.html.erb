@@ -1,4 +1,6 @@
 <%= render 'shared/navbar' %>
+
+
 <div class='acceuil'>
   <h4>Laboratoire El Karaouyine vous accompagne depuis plus de 30 ans dans votre santé</h4>
   <p>Nous faisons de votre bien être notre objectif primordial </p>
@@ -7,13 +9,13 @@
 <div id="carouselExampleInterval" class="carousel slide w-50 m-auto" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="5000">
-      <%= image_tag("dna.jpg", class: "d-block w-auto") %>
+      <%= image_tag("blood.jpg", class: "d-block w-auto") %>
     </div>
     <div class="carousel-item" data-bs-interval="3000">
       <%= image_tag("analyse.jpg", class: "d-block w-auto") %>
     </div>
     <div class="carousel-item">
-      <%= image_tag("blood.jpg", class: "d-block w-auto") %>
+      <%= image_tag("dna.jpg", class: "d-block w-auto") %>
     </div>
   </div>
 </div>
@@ -32,3 +34,5 @@
   </div>
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.888849605811!2d-4.995115384837923!3d34.02106392682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd9f8b6dce23a6c9%3A0xd2e1a9e20de5aaaf!2slaboratoire%20karaouine!5e0!3m2!1sfr!2sma!4v1647884809729!5m2!1sfr!2sma" allowfullscreen="" loading="lazy" class="carte"></iframe>
 </div>
+
+<%= render 'shared/footer' %>

@@ -1,8 +1,16 @@
 <%= render 'shared/navbar' %>
+<%= render 'shared/footer' %>
+<div class="container">
+  <h3 class='acceuil'>Prise de rendez-vous</h3>
 
-
-<%= simple_form_for @appointement do |f| %>
-  <%= f.input :date_of_appointement %>
-  <%= f.input :time %>
-  <%= f.button :submit %>
-<% end %>
+  <div class="container">
+    <%= simple_form_for @appointement do |f| %>
+      <%= f.input :date_of_appointement, as: :date,
+                                order: [:day ,:month] ,
+                                label: "Choisissez le jour et le mois du rendez-vous"%>
+      <%= f.input :time, label: "Choisissez l'heure du rendez-vous",
+                          collection: Appointement::WORKING_HOUR %>
+      <%= f.button :submit, 'Soumettre !',  class: "btn btn-primary wide-btn" %>
+    <% end %>
+  </div>
+</div>
