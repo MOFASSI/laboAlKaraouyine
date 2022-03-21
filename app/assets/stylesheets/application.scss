@@ -1,1 +1,7 @@
 @import "bootstrap/scss/bootstrap";
+
+
+
+// local scss
+@import url(components/_index.scss);
+@import "pages/index";
