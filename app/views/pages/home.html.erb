@@ -1,1 +1,34 @@
 <%= render 'shared/navbar' %>
+<div class='acceuil'>
+  <h4>Laboratoire El Karaouyine vous accompagne depuis plus de 30 ans dans votre santé</h4>
+  <p>Nous faisons de votre bien être notre objectif primordial </p>
+  <p id='zbi'>Idéalement situé dans un quartier calme, nous vous acceuillons dans la serénité pour réaliser vos prélévements  </p>
+</div>
+<div id="carouselExampleInterval" class="carousel slide w-50 m-auto" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="5000">
+      <%= image_tag("dna.jpg", class: "d-block w-auto") %>
+    </div>
+    <div class="carousel-item" data-bs-interval="3000">
+      <%= image_tag("analyse.jpg", class: "d-block w-auto") %>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag("blood.jpg", class: "d-block w-auto") %>
+    </div>
+  </div>
+</div>
+
+
+<div class="informations">
+  <div class="description">
+    <p>What is Lorem Ipsum?
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <p> Une description pour pouvoir retrouver le laboratoire</p>
+  </div>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.888849605811!2d-4.995115384837923!3d34.02106392682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd9f8b6dce23a6c9%3A0xd2e1a9e20de5aaaf!2slaboratoire%20karaouine!5e0!3m2!1sfr!2sma!4v1647884809729!5m2!1sfr!2sma" allowfullscreen="" loading="lazy" class="carte"></iframe>
+</div>
