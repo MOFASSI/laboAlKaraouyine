@@ -15,7 +15,7 @@ class AppointementsController < ApplicationController
     appointement = Appointement.new(appointement_query)
     appointement.user = current_user
     if appointement.save!
-      redirect_to appointement_path(appointement)
+      redirect_to user_path(appointement.user)
     else
       render new
     end
