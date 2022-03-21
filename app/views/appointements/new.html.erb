@@ -1,0 +1,8 @@
+<%= render 'shared/navbar' %>
+
+
+<%= simple_form_for @appointement do |f| %>
+  <%= f.input :date_of_appointement %>
+  <%= f.input :time %>
+  <%= f.button :submit %>
+<% end %>
