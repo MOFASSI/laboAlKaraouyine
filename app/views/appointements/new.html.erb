@@ -5,12 +5,11 @@
 
   <div class="container">
     <%= simple_form_for @appointement do |f| %>
-      <%= f.input :date_of_appointement, as: :date,
-                                order: [:day ,:month] ,
-                                label: "Choisissez le jour et le mois du rendez-vous"%>
-      <%= f.input :time, label: "Choisissez l'heure du rendez-vous",
-                          collection: Appointement::WORKING_HOUR %>
+      <%= f.input :day, collection: [(Date.today + 1).day,(Date.today + 2).day, (Date.today + 3).day],
+                         label: "Choisissez le jour du rendez-vous"  %>
+      <%= f.input :hour, collection: Appointement::WORKING_HOUR,
+                        label: "Choisissez l'heure du rendez-vous" %>
       <%= f.button :submit, 'Soumettre !',  class: "btn btn-primary wide-btn" %>
-    <% end %>
+    <%end %>
   </div>
 </div>

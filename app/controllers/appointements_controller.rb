@@ -13,6 +13,7 @@ class AppointementsController < ApplicationController
 
   def create
     appointement = Appointement.new(appointement_query)
+    appointement = month_appointement(appointement)
     appointement.user = current_user
     if appointement.save!
       redirect_to user_path(appointement.user)
@@ -24,6 +25,15 @@ class AppointementsController < ApplicationController
   private
 
   def appointement_query
-    params.require(:appointement).permit(:date_of_appointement, :time)
+    params.require(:appointement).permit(:day, :hour)
+  end
+
+  def month_appointement(appointement)
+    if Date.today.month >= 29 && appoitenement.day < 30
+      appointement.month = Date.today.month + 1
+    else
+      appointement.month = Date.today.month
+    end
+    appointement
   end
 end
