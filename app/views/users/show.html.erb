@@ -6,7 +6,8 @@
 
 
 
-<% @appointements.each do |appointement|  %>
-  <%= appointement.date_of_appointement %>
-  <%= appointement.time %>
+<% @appointements.each do |appointement| %>
+  <%= appointement.month%>
+  <%= appointement.day %>
+  <%= appointement.hour %>
 <%end %>

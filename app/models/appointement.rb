@@ -6,12 +6,6 @@ class Appointement < ApplicationRecord
                   '16:40', '17:00']
 
   belongs_to :user
-  validates :date_of_appointement, :time, presence: true
-  validate :minimum_date
-
-  def minimum_date
-    if date_of_appointement < Date.today + 1
-      errors.add(:date_of_appointement, "Vous devez choisir un rendez vous deux jours avant")
-    end
-  end
+  validates :day, :hour, :month, presence: true
+  validates :hour, inclusion: { in: WORKING_HOUR }
 end
